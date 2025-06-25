@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Developer Roadmap - Learn Step by Step</title>
+    <meta name="description" content="Master frontend development with our comprehensive roadmap. Learn HTML, CSS, JavaScript, and more with curated resources and step-by-step guidance.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <i class="fas fa-code"></i>
+                        <h1>Frontend Roadmap</h1>
+                    </div>
+                    <nav class="nav">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <button class="search-toggle" id="searchToggle" aria-label="Open search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Search Modal -->
+        <div class="search-modal" id="searchModal">
+            <div class="search-container">
+                <div class="search-header">
+                    <h3>Search Topics & Resources</h3>
+                    <button class="close-search" id="closeSearch">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search for topics, subtopics, or resources...">
+                </div>
+                <div class="search-results" id="searchResults"></div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main">
+            <div class="container">
+                <!-- Hero Section -->
+                <section class="hero">
+                    <div class="hero-content">
+                        <h2>Master Frontend Development</h2>
+                        <p>Step-by-step guide to becoming a modern frontend developer in 2025. Learn HTML, CSS, JavaScript, and more with curated resources and hands-on projects.</p>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-number" id="totalTopics">0</span>
+                                <span class="stat-label">Topics</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" id="totalSubtopics">0</span>
+                                <span class="stat-label">Subtopics</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" id="totalResources">0</span>
+                                <span class="stat-label">Resources</span>
+                            </div>
+                        </div>
+                        <div class="progress-overview">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="overallProgress"></div>
+                            </div>
+                            <span class="progress-text" id="progressText">0% Complete</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Topics Grid -->
+                <section class="topics-section">
+                    <div class="section-header">
+                        <h3>Learning Path</h3>
+                        <p>Follow the roadmap in order or jump to any topic you want to learn</p>
+                    </div>
+                    <div class="topics-grid" id="topicsGrid">
+                        <!-- Topics will be dynamically loaded here -->
+                    </div>
+                </section>
+
+                <!-- Quick Actions -->
+                <section class="quick-actions">
+                    <div class="section-header">
+                        <h3>Quick Actions</h3>
+                    </div>
+                    <div class="actions-grid">
+                        <button class="action-btn" id="resetProgress">
+                            <i class="fas fa-undo"></i>
+                            <span>Reset Progress</span>
+                        </button>
+                        <button class="action-btn" id="exportProgress">
+                            <i class="fas fa-download"></i>
+                            <span>Export Progress</span>
+                        </button>
+                        <button class="action-btn" id="importProgress">
+                            <i class="fas fa-upload"></i>
+                            <span>Import Progress</span>
+                        </button>
+                        <input type="file" id="importFile" accept=".json" style="display: none;">
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 Frontend Developer Roadmap. Based on <a href="https://roadmap.sh/frontend" target="_blank" rel="noopener">roadmap.sh</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Topic Modal -->
+    <div class="topic-modal" id="topicModal">
+        <div class="topic-modal-content">
+            <div class="topic-modal-header">
+                <h2 id="modalTopicTitle"></h2>
+                <button class="close-modal" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="topic-modal-body" id="modalTopicBody">
+                <!-- Topic content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="roadmap.js"></script>
+    <script src="app.js"></script>
+</body>
+</html> 
